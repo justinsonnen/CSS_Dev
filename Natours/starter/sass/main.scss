@@ -3,6 +3,8 @@ $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
 $color-grey-dark:#777;
+$color-white: #fff;
+$color-black: #000;
 
 
 /* Universal selector, start with no margin or padding
@@ -25,7 +27,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color: #777;
+    color: $color-grey-dark;
     padding: 3rem;
 
     box-sizing: border-box;
@@ -68,7 +70,7 @@ top-left to bottom-left */
 }
 
 .heading-primary {
-    color: #fff;
+    color: $color-white;
     text-transform: uppercase;
 
     backface-visibility: hidden;
@@ -163,7 +165,7 @@ top-left to bottom-left */
 }
 
 .btn--white {
-    background-color: #fff;
+    background-color: $color-white;
     color: $color-grey-dark;
 }
 
@@ -181,7 +183,7 @@ top-left to bottom-left */
 }
 
 .btn--white::after {
-    background-color: #fff;
+    background-color: $color-white;
 }
 
 .btn:hover::after {
