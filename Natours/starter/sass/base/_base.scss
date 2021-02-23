@@ -11,6 +11,26 @@ change box model to remove any padding or borders */
 //determines what 1rem is
 html {
     font-size: 62.5%;
+
+    @include respond(sm-phone){
+        font-size: 35%;
+    }
+
+    @include respond(phone){
+        font-size: 50%;
+    }
+
+    @include respond(tab-port){
+        font-size: 60%;
+    }
+
+    @include respond(tab-land){
+        font-size: 70%;
+    }
+
+    @include respond(big-desktop){
+        font-size: 80%;
+    }
 }
 
 /* Add project-wide font definitions to be inherited*/
