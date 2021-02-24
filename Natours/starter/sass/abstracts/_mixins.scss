@@ -30,12 +30,14 @@ $breakpoint arguments:
 - tab-land
 - big-desktop
 
+
+Order:  Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 @mixin respond($breakpoint) {
-    @if $breakpoint == sm-phone {
-        @media (max-width: 30em)  { @content };       //480px
-    }
+    // @if $breakpoint == sm-phone {
+    //     @media (max-width: 31.25em)  { @content };       //500px
+    // }
 
     @if $breakpoint == phone {
         @media (max-width: 37.5em)  { @content };       //600px
