@@ -74,6 +74,11 @@ body {
     font-size: $default-font-size;
     font-weight: 700;
     text-transform: uppercase;
+
+    @include respond (phone) {
+        padding-top: 10px;
+        float: left;
+    }
 }
 
 .paragraph {

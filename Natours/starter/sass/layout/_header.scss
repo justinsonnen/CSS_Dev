@@ -3,33 +3,30 @@
 top-right to bottom-right, 
 top-left to bottom-left */
 .header {
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom, 
-        rgba($color-primary-light, 0.8), 
-        rgba($color-primary-dark, 0.8)), 
+    height: 82vh;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)),
         url(../img/hero-small.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
-    
+
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em), 
-        (min-width: 125em) {
-        background-image: linear-gradient(
-            to right bottom, 
-            rgba($color-secondary-light, 0.8), 
-            rgba($color-secondary-dark, 0.8)), 
-            url(../img/hero.jpg);
+    @supports (clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        height: 95vh;
     }
 
-    @media (min-width: 2000px) {
-        background-image: linear-gradient(
-            to right bottom, 
-            rgba($color-secondary-light, 0.8), 
-            rgba($color-secondary-dark, 0.8)), 
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+        background-image: linear-gradient(to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
             url(../img/hero.jpg);
     }
 
@@ -41,7 +38,7 @@ top-left to bottom-left */
     &__logo-box {
         position: absolute;
         top: 4rem;
-        left: 4rem; 
+        left: 4rem;
     }
 
     &__logo {
@@ -56,4 +53,3 @@ top-left to bottom-left */
         text-align: center;
     }
 }
-
